@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://campus-dashboard-backend-lfen.onrender.com" },
+    { "source": "/api/:path*", "destination": "https://campus-dashboard-backend-lfen.onrender.com/api/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
