@@ -35,8 +35,8 @@ CampusBot analyzes user queries, routes them to the relevant MCP server(s), and 
 
 ## Live Demo
 
-* Frontend: https://your-vercel-url.vercel.app
-* Backend API: https://your-render-url.onrender.com
+* Frontend: https://campus-dashboard-ashen.vercel.app/
+* Backend API: https://campus-dashboard-backend-lfen.onrender.com
 
 ## Installation
 
@@ -69,8 +69,6 @@ npm start
 
 ```env
 GROQ_API_KEY=your_groq_api_key
-GOOGLE_CALENDAR_API_KEY=your_google_calendar_api_key
-GOOGLE_CALENDAR_ID=your_calendar_id
 FRONTEND_URL=your_frontend_url
 NODE_ENV=production
 ```
