@@ -1,0 +1,178 @@
+/* Cards.css */
+
+/* ── Book ── */
+.book-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  gap: 10px;
+}
+.book-row:last-child { border-bottom: none; }
+.book-info { flex: 1; min-width: 0; }
+.book-title { font-weight: 600; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.book-author { font-size: 11px; color: var(--text2); margin-top: 2px; }
+.book-location { font-size: 11px; color: var(--text3); margin-top: 2px; }
+.book-avail { flex-shrink: 0; }
+.section-label { font-size: 11px; color: var(--text3); font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; }
+.clear-btn { margin-top: 10px; background: transparent; border: 1px solid var(--border); color: var(--text2); padding: 6px 12px; border-radius: var(--radius-sm); font-size: 12px; transition: all 0.15s; }
+.clear-btn:hover { border-color: var(--accent); color: var(--accent); }
+.more-hint { font-size: 11px; color: var(--accent); text-align: right; margin-top: 8px; }
+
+/* ── Cafeteria ── */
+.meal-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.meal-tab {
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text2);
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.meal-tab.active {
+  background: rgba(79,142,247,0.15);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.meal-tab:hover:not(.active) { background: var(--bg2); }
+
+.special-banner {
+  background: rgba(251,146,60,0.1);
+  border: 1px solid rgba(251,146,60,0.25);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-size: 12px;
+  color: var(--accent4);
+  margin-bottom: 10px;
+}
+
+.meal-time { font-size: 11px; color: var(--text3); margin-bottom: 10px; display: flex; align-items: center; gap: 4px; }
+.meal-items { display: flex; flex-direction: column; gap: 6px; }
+.meal-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  background: var(--bg2);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+}
+.meal-item::before { content: "•"; color: var(--accent); font-size: 16px; line-height: 1; }
+
+/* ── Events ── */
+.event-list { display: flex; flex-direction: column; gap: 10px; }
+.event-card {
+  padding: 12px;
+  background: var(--bg2);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent);
+  transition: background 0.15s;
+}
+.event-card:hover { background: var(--card-hover); }
+.event-cat-Technical { border-left-color: var(--accent); }
+.event-cat-Cultural { border-left-color: var(--accent2); }
+.event-cat-Academic { border-left-color: var(--accent3); }
+.event-cat-Sports { border-left-color: var(--accent4); }
+.event-cat-Placement { border-left-color: #f9a8d4; }
+.event-cat-Social { border-left-color: #a5b4fc; }
+
+.event-title { font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+.event-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 5px; }
+.event-date { font-size: 11px; color: var(--text2); }
+.event-venue { font-size: 11px; color: var(--text3); }
+.event-desc { font-size: 12px; color: var(--text2); line-height: 1.4; }
+.event-spots { font-size: 11px; color: var(--accent3); margin-top: 4px; }
+.event-reg { display: inline-block; margin-top: 6px; padding: 4px 10px; background: rgba(79,142,247,0.1); border: 1px solid rgba(79,142,247,0.25); border-radius: 6px; font-size: 11px; color: var(--accent); }
+
+.cat-filters {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.cat-btn {
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text3);
+  font-size: 11px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.cat-btn.active, .cat-btn:hover { background: var(--card-hover); color: var(--text); border-color: var(--text3); }
+
+/* ── Timetable ── */
+.class-list { display: flex; flex-direction: column; gap: 8px; }
+.class-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: var(--bg2);
+  border-radius: var(--radius-sm);
+  transition: background 0.15s;
+}
+.class-item.current { background: rgba(79,142,247,0.08); border: 1px solid rgba(79,142,247,0.2); }
+.class-time { font-size: 11px; color: var(--text3); white-space: nowrap; min-width: 90px; }
+.class-info { flex: 1; }
+.class-subject { font-weight: 600; font-size: 13px; }
+.class-details { font-size: 11px; color: var(--text2); margin-top: 2px; }
+.class-room { margin-left: auto; font-size: 11px; color: var(--accent); background: rgba(79,142,247,0.1); padding: 2px 8px; border-radius: 6px; }
+
+.day-selector {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+.day-btn {
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text2);
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+.day-btn.active { background: rgba(79,142,247,0.15); border-color: var(--accent); color: var(--accent); }
+.day-btn:hover:not(.active) { background: var(--bg2); }
+.current-badge { font-size: 10px; color: var(--accent); margin-left: 6px; }
+
+/* ── Deadlines ── */
+.deadline-list { display: flex; flex-direction: column; gap: 8px; }
+.deadline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  background: var(--bg2);
+  border-radius: var(--radius-sm);
+  gap: 10px;
+}
+.deadline-info { flex: 1; }
+.deadline-title { font-weight: 600; font-size: 13px; }
+.deadline-subject { font-size: 11px; color: var(--text2); margin-top: 2px; }
+.deadline-right { text-align: right; flex-shrink: 0; }
+.deadline-date { font-size: 11px; color: var(--text); font-weight: 500; }
+.deadline-days {
+  font-size: 10px;
+  margin-top: 3px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.days-urgent { background: rgba(248,113,113,0.15); color: var(--red); }
+.days-soon { background: rgba(251,146,60,0.15); color: var(--accent4); }
+.days-ok { background: rgba(52,211,153,0.15); color: var(--accent3); }
